@@ -1,5 +1,6 @@
 package com.example.vip
 
+import android.content.Intent
 import android.graphics.fonts.FontStyle
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -50,6 +51,12 @@ class MainActivity : ComponentActivity() {
             }
         }
     }
+    @Composable
+    fun ScheduleScreen(navController: NavController){
+        var intent = Intent(this,ScheduleActivity::class.java)
+        startActivity(intent)
+    }
+
 }
 
 @Composable
@@ -116,7 +123,7 @@ fun LoginScreen(navController: NavController){
 //                shape = RoundedCornerShape(50.dp),
 //                colors = TextFieldDefaults.textFieldColors(backgroundColor = Color.Black)
 
-                )
+            )
             Spacer(modifier = Modifier.height(20.dp))
             TextField(
 
@@ -135,7 +142,7 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(20.dp))
             Text("Забыл пароль", textAlign = TextAlign.Center, modifier = Modifier.clickable{
                 // TODO Экран забыл пароль
-                navController.navigate("ScheduleScreen")
+                navController.navigate("RestorePasswordScreen")
             })
             Spacer(modifier = Modifier.height(40.dp))
 
@@ -144,18 +151,18 @@ fun LoginScreen(navController: NavController){
                 gradient = Brush.linearGradient(colors = listOf(Color(102, 100, 173),Color(229, 154, 241))),
                 onClick = {
 
-                    navController.navigate("ScheduleScreen")},
+                    navController.navigate("ScheduleScreen")}, // change to MainScreen
                 modifier = Modifier.fillMaxWidth())
 
             Spacer(modifier = Modifier.height(40.dp))
             Text("Регистрация", textAlign = TextAlign.Center, modifier = Modifier.clickable{
                 // TODO Экран регистрация
-                navController.navigate("ScheduleScreen")
+                navController.navigate("RegisterScreen")
             })
 
 
 
-                //support
+            //support
         }
     }
 
@@ -170,7 +177,7 @@ fun LoginScreen(navController: NavController){
 }
 
 @Composable
-fun ScheduleScreen(navController: NavController){
+fun LoadingScreen(navController: NavController){
     Column(
         verticalArrangement = Arrangement.SpaceEvenly,
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -181,7 +188,7 @@ fun ScheduleScreen(navController: NavController){
 
 
         ){
-        Text("ScheduleScreenText!!!", textAlign = TextAlign.Center, modifier = Modifier.clickable{
+        Text("Loading...", textAlign = TextAlign.Center, modifier = Modifier.clickable{
             navController.navigate("LoginScreen")
         })
 
