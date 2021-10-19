@@ -177,25 +177,6 @@ fun LoginScreen(navController: NavController){
 }
 
 @Composable
-fun LoadingScreen(navController: NavController){
-    Column(
-        verticalArrangement = Arrangement.SpaceEvenly,
-        horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier
-            .fillMaxSize()
-//            .background(Color.Green)
-        ,
-
-
-        ){
-        Text("Loading...", textAlign = TextAlign.Center, modifier = Modifier.clickable{
-            navController.navigate("LoginScreen")
-        })
-
-    }
-}
-
-@Composable
 fun ImageCard(
     painter: Painter,
     contentDescription: String,
