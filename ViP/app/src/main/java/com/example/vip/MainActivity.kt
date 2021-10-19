@@ -53,6 +53,9 @@ class MainActivity : ComponentActivity() {
     }
     @Composable
     fun ScheduleScreen(navController: NavController){
+
+        // кнопки регистрации и входа пока являются кнопками перехода к расписанию
+
         var intent = Intent(this,ScheduleActivity::class.java)
         startActivity(intent)
     }
@@ -142,7 +145,7 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(20.dp))
             Text("Забыл пароль", textAlign = TextAlign.Center, modifier = Modifier.clickable{
                 // TODO Экран забыл пароль
-                navController.navigate("RestorePasswordScreen")
+                navController.navigate("ScheduleScreen")
             })
             Spacer(modifier = Modifier.height(40.dp))
 
@@ -157,7 +160,7 @@ fun LoginScreen(navController: NavController){
             Spacer(modifier = Modifier.height(40.dp))
             Text("Регистрация", textAlign = TextAlign.Center, modifier = Modifier.clickable{
                 // TODO Экран регистрация
-                navController.navigate("RegisterScreen")
+                navController.navigate("ScheduleScreen")
             })
 
 
