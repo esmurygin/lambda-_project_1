@@ -45,19 +45,24 @@ class MainActivity : ComponentActivity() {
                     LoginScreen(navController = navController)
                 }
                 composable(route = "ScheduleScreen"){
-                    ScheduleScreen(navController = navController)
+                    ScheduleScreen()
                 }
 
             }
         }
     }
     @Composable
-    fun ScheduleScreen(navController: NavController){
+    fun ScheduleScreen(){
 
         // кнопки регистрации и входа пока являются кнопками перехода к расписанию
 
         var intent = Intent(this,ScheduleActivity::class.java)
-        startActivity(intent)
+        try {
+            startActivity(intent)
+        }catch (e: Exception){
+            e.printStackTrace()
+        }
+
     }
 
 }

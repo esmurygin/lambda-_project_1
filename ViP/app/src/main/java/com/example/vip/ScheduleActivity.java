@@ -25,46 +25,46 @@ public class ScheduleActivity extends ComponentActivity {
 
     void show_activity(){
         setContentView(R.layout.schedule_layout);
-        ImageButton btn = (ImageButton)(findViewById(R.id.monday));
+        ImageButton btn = (ImageButton)(findViewById(R.id.monday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("monday");
+                look_day("понедельник");
             }
         });
-        btn = (ImageButton)(findViewById(R.id.tuesday));
+        btn = (ImageButton)(findViewById(R.id.tuesday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("tuesday");
+                look_day("вторник");
             }
         });
-        btn = (ImageButton)(findViewById(R.id.wednesday));
+        btn = (ImageButton)(findViewById(R.id.wednesday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("wednesday");
+                look_day("среда");
             }
         });
-        btn = (ImageButton)(findViewById(R.id.thursday));
+        btn = (ImageButton)(findViewById(R.id.thursday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("thursday");
+                look_day("четверг");
             }
         });
-        btn = (ImageButton)(findViewById(R.id.friday));
+        btn = (ImageButton)(findViewById(R.id.friday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("friday");
+                look_day("пятница");
             }
         });
-        btn = (ImageButton)(findViewById(R.id.saturday));
+        btn = (ImageButton)(findViewById(R.id.saturday_button));
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                look_day("saturday");
+                look_day("суббота");
             }
         });
     }
